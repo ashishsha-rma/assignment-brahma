@@ -1,0 +1,11 @@
+mysql:
+  image:
+    repository: "ashishsharma8/mysql"
+    tag: "latest"
+  rootPassword: "password"
+  database: "dbname"
+  user: "user"
+  password: "password"
+  service:
+    name: "mysql"
+    port: 3306

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mysql-chart.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "mysql-chart.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "mysql-chart.name" . }}
+    spec:
+      containers:
+        - name: mysql
+          image: "{{ .Values.mysql.image.repository }}:{{ .Values.mysql.image.tag }}"
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: {{ .Values.mysql.rootPassword | quote }}
+            - name: MYSQL_DATABASE
+              value: {{ .Values.mysql.database | quote }}
+            - name: MYSQL_USER
+              value: {{ .Values.mysql.user | quote }}
+            - name: MYSQL_PASSWORD
+              value: {{ .Values.mysql.password | quote }}
+          ports:
+            - containerPort: {{ .Values.mysql.service.port }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.mysql.service.name }}
+spec:
+  selector:
+    app: {{ include "mysql-chart.name" . }}
+  ports:
+    - port: {{ .Values.mysql.service.port }}
+      targetPort: {{ .Values.mysql.service.port }}

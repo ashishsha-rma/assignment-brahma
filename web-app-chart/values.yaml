@@ -1,0 +1,22 @@
+webApp:
+  replicaCount: 1
+  image:
+    repository: "ashishsharma8/web"
+    tag: "latest"
+  service:
+    name: "web-app"
+    type: LoadBalancer
+    port: 8080
+  ingress:
+    enabled: false
+    annotations: {}
+    hosts:
+      - host: chart-example.local
+        paths: ["/"]
+
+mysql:
+  host: "mysql"
+  port: 3306
+  user: "user"
+  password: "password"
+  database: "dbname"
