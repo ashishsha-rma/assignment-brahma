@@ -1,0 +1,18 @@
+# Prometheus Operator Installation
+kubectl create namespace monitoring
+kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/bundle.yaml
+
+# Deploy Prometheus Instance (create your-prometheus-config.yaml)
+kubectl apply -f your-prometheus-config.yaml
+
+# Install Grafana
+helm repo add grafana https://grafana.github.io/helm-charts
+helm install grafana grafana/grafana -n monitoring
+
+# Access Grafana UI (replace <GRAFANA-IP> with the obtained IP/DNS)
+GRAFANA_IP=$(kubectl get svc grafana -n monitoring -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
+echo "Grafana UI: http://${GRAFANA_IP}"
+
+# Login to Grafana UI (replace <GRAFANA-PASSWORD> with the obtained password)
+GRAFANA_PASSWORD=$(kubectl get secret grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 -d)
+echo "Grafana Password: ${GRAFANA_PASSWORD}"
