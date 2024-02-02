@@ -32,7 +32,8 @@ ARGO and Github Sync status
 <img width="1418" alt="Screenshot 2024-02-02 at 3 00 33 PM" src="https://github.com/ashishsha-rma/assignment-brahma/assets/157615095/ea2b0026-aa26-447f-9fdd-e1a2396ee777">
 
 
-<img width="699" alt="Screenshot 2024-02-02 at 3 01 04 PM" src="https://github.com/ashishsha-rma/assignment-brahma/assets/157615095/a8b4b7dc-88f5-457b-9ddd-a9611e5c607b">
+<img width="701" alt="Screenshot 2024-02-02 at 3 02 45 PM" src="https://github.com/ashishsha-rma/assignment-brahma/assets/157615095/eaea50ea-60cc-486f-bf52-99c7c3cd5e6b">
+
 
 ------------------------------------------------------
 Grafana Mionitoring Dashboard
