@@ -12,7 +12,8 @@ Web app curl:
 ------------------------------------------------------
 
 
-<img width="786" alt="Screenshot 2024-01-24 at 8 32 22 PM" src="https://github.com/ashishsha-rma/assignment-brahma/assets/157615095/a681bb6f-ba7f-4d20-8d89-5a5ea76ca22b">
+<img width="600" alt="Screenshot 2024-02-02 at 2 54 04 PM" src="https://github.com/ashishsha-rma/assignment-brahma/assets/157615095/078f64c6-0260-44b6-b36c-3d94c6c5e382">
+
 
 ------------------------------------------------------
 ARGO-CD
