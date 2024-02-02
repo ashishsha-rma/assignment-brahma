@@ -36,7 +36,7 @@ ARGO and Github Sync status
 
 
 ------------------------------------------------------
-Grafana Mionitoring Dashboard
+Grafana Monitoring Dashboard
 ------------------------------------------------------
 
 
